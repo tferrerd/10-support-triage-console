@@ -2,9 +2,22 @@
 
 - **Application:** Customer support automation
 - **Portfolio project:** 10 of 15
-- **Status:** Project brief defined. Dataset acquisition, ML, application and MLOps implementation have not started.
+- **Status:** Source-derived CSV data is committed. ML models, the application and MLOps remain to be implemented.
 
 Part of [Tomas Ferrer's DS/ML portfolio](https://tomasferrer.com/).
+
+## Committed CSV dataset
+
+**Dataset:** PolyAI BANKING77
+
+**Coverage:** Complete published train.csv and test.csv intent-classification tables, preserving text/category fields and split membership.
+
+| CSV file | Rows |
+|---|---:|
+| [banking77_train.csv](data/raw/banking77_train.csv) | 10,003 |
+| [banking77_test.csv](data/raw/banking77_test.csv) | 3,080 |
+
+These are actual published observations or documented format conversions. See [source, license and limitations](data/DATASET.md) and [CSV schemas/checksums](data/csv-manifest.json).
 
 ## Project prompt
 
@@ -20,11 +33,9 @@ Write a short project charter defining the user, current baseline, primary busin
 
 ### Published dataset and raw data
 
-A date-bounded snapshot of the [CFPB complaint database](https://www.consumerfinance.gov/data-research/consumer-complaints/), using published narratives and categories. Record the export/API query and acquisition date. Use source-derived examples where permitted. Complaint categories are proxies for routing, not observed support-team assignments; exclude future response fields from predictors.
+The committed source is **PolyAI BANKING77**. Complete published train.csv and test.csv intent-classification tables, preserving text/category fields and split membership. See [dataset documentation](data/DATASET.md) for original links, attribution, usage terms and limitations.
 
-**Additional source/access notes:** Acquire a date-bounded API/export snapshot with its query and retrieval date. Use narrative-available records, audit duplicated text and changed taxonomies. Category prediction is a routing proxy; future response fields must not leak into inputs
-
-Acquire a pinned source release into `data/raw/` and preserve the original bytes. Add a repeatable acquisition script and a manifest containing source URL, release/version, retrieval time, citation, terms, file sizes and SHA-256 checksums. Keep cleaned data in `data/interim/` and model-ready features/split assignments in `data/processed/`. Raw data stay out of Git unless redistribution is explicitly appropriate.
+Acquire a pinned source release into `data/raw/` and preserve the original bytes. Add a repeatable acquisition script and a manifest containing source URL, release/version, retrieval time, citation, terms, file sizes and SHA-256 checksums. Keep cleaned data in `data/interim/` and model-ready features/split assignments in `data/processed/`. Redistributable CSV exports and the documented supporting assets are committed; large source archives remain excluded from Git.
 
 Audit labels, decision-time feature availability, duplicates, missingness, class balance, and temporal/group structure. If the candidate cannot support the task or intended use, find another suitable published dataset or narrow the question. Generated fixtures and economic scenarios are supplementary, clearly labeled artifacts.
 
@@ -38,7 +49,7 @@ Produce a reproducible training command and save the fitted preprocessing, model
 
 ### Evaluation and business impact
 
-Macro-F1, per-class recall, error costs, and selective accuracy versus automated coverage. Use chronological evaluation when sufficient dated labeled records are available.
+Macro-F1, per-class recall, error costs, and selective accuracy versus automated coverage. Use the published BANKING77 train/test split; no chronological evaluation is claimed because timestamps are absent.
 
 Separate development/model selection from final evaluation. Fit transformations on training data only and compare candidate and incumbent on the same evaluation protocol. Save metrics, uncertainty/robustness checks, and representative failure cases with code/data/model identifiers.
 
@@ -75,7 +86,7 @@ Use the smallest architecture that completes this lifecycle. Select real-time or
 
 ## Completion checklist
 
-- [ ] Published source acquired, checksum verified and provenance/profile recorded.
+- [x] Published source acquired, checksum verified and provenance/profile recorded.
 - [ ] Data audit, project charter, success criteria and evaluation protocol complete.
 - [ ] Baseline and trained ML component evaluated; artifacts and failure analysis saved.
 - [ ] Working application deployed with the exact evaluated model version.
@@ -84,4 +95,4 @@ Use the smallest architecture that completes this lifecycle. Select real-time or
 
 ## Current implementation
 
-This repository currently contains the implementation brief and Git exclusions. The dataset links identify starting sources; acquisition and model results will be documented as implementation proceeds.
+Published dataset observations, CSV exports, supporting assets where applicable, and provenance/checksum documentation are present. Models, application functionality and MLOps have not been implemented or evaluated yet.

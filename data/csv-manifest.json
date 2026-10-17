@@ -1,0 +1,35 @@
+{
+  "dataset": "PolyAI BANKING77",
+  "source_urls": [
+    "https://github.com/PolyAI-LDN/task-specific-datasets/tree/master/banking_data",
+    "https://huggingface.co/datasets/PolyAI/banking77"
+  ],
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "selection": "Complete published train.csv and test.csv intent-classification tables, preserving text/category fields and split membership.",
+  "notes": "Attribution: I\u00f1igo Casanueva, Tadas Tem\u010dinas, Daniela Gerz, Matthew Henderson, Ivan Vuli\u0107 / PolyAI, Efficient Intent Detection with Dual Sentence Encoders (2020). Uses the published banking-intent benchmark instead of the unavailable CFPB API snapshot. Categories provide direct routing/intent targets, not resolution outcomes. There are no timestamps; use the official test split rather than claiming chronological evaluation.",
+  "generated_at_utc": "2026-10-17T20:50:59.950775+00:00",
+  "files": [
+    {
+      "path": "data/raw/banking77_train.csv",
+      "rows": 10003,
+      "columns": [
+        "text",
+        "category"
+      ],
+      "bytes": 829069,
+      "sha256": "c13c6d140f3072e184179261fe8204a9094b9fa3b021bcc4ddb3174ee36eea83"
+    },
+    {
+      "path": "data/raw/banking77_test.csv",
+      "rows": 3080,
+      "columns": [
+        "text",
+        "category"
+      ],
+      "bytes": 236880,
+      "sha256": "e10f6bc95fe4e3eb5e8060f60f09aee8b17d03f23ce0047d9511e8003c26c808"
+    }
+  ],
+  "assets": []
+}
