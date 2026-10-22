@@ -1,0 +1,9 @@
+.env*
+.git/
+.next/
+node_modules/
+data/raw/
+data/DATASET.md
+data/csv-manifest.json
+PROJECT_BRIEF.md
+tests/

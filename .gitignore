@@ -16,3 +16,8 @@ models/
 mlruns/
 mlflow.db
 *.part
+node_modules/
+.next/
+coverage/
+*.tsbuildinfo
+.vercel/

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "duplicate-charge",
+    "title": "Charged twice",
+    "ticket": "I was charged twice for my monthly subscription yesterday. Both charges have settled. Please help me get the duplicate payment back.",
+    "category": "payments",
+    "urgent": false
+  },
+  {
+    "id": "late-parcel",
+    "title": "A late delivery",
+    "ticket": "My parcel was due three days ago, but tracking has not moved since Monday. Can you check where it is? There is no deadline for delivery.",
+    "category": "shipping",
+    "urgent": false
+  },
+  {
+    "id": "outage",
+    "title": "Orders are blocked",
+    "ticket": "Every API request has returned a 500 error for the last 20 minutes. Our whole team cannot process customer orders and we have no workaround. Please investigate immediately.",
+    "category": "technical",
+    "urgent": true
+  },
+  {
+    "id": "return",
+    "title": "A simple return",
+    "ticket": "The jacket arrived today but it is too small. It is unworn with the tags attached. How do I start a return or exchange?",
+    "category": "returns",
+    "urgent": false
+  },
+  {
+    "id": "opening-hours",
+    "title": "A general question",
+    "ticket": "Hello! What are your customer support opening hours during the holiday period? I am just planning ahead. Thanks.",
+    "category": "other",
+    "urgent": false
+  },
+  {
+    "id": "ambiguous",
+    "title": "An unclear order issue",
+    "ticket": "My order is wrong and the app looks strange. I see something pending and I am not sure whether that is a charge or a delivery status. Can someone help me figure this out?",
+    "category": "other",
+    "urgent": false
+  },
+  {
+    "id": "angry-return",
+    "title": "A frustrated customer",
+    "ticket": "This is my fourth message about returning the broken headphones. I am furious that nobody has sent a return label. If this keeps happening I am closing my account.",
+    "category": "returns",
+    "urgent": false
+  },
+  {
+    "id": "fraud",
+    "title": "Ongoing payment harm",
+    "ticket": "Several card payments I did not authorize are appearing right now. Another charge arrived while I was typing. Please help stop this ongoing loss immediately.",
+    "category": "payments",
+    "urgent": true
+  }
+]

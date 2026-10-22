@@ -1,0 +1,80 @@
+{
+  "evaluatedOn": "2026-10-21",
+  "dataset": "data/synthetic-evaluation.json",
+  "datasetSha256": "64c25e7341bb510337b8278200abe624412653d6dd2007ec51922cbdfae1b6e8",
+  "sdkVersion": "0.7.0",
+  "policyVersion": "1",
+  "requestCount": 8,
+  "automaticRetries": 0,
+  "summary": {
+    "mode": "LIVE",
+    "models": [
+      "jev-1.13.0"
+    ],
+    "total": 8,
+    "completed": 8,
+    "failed": 0,
+    "categoryAccuracy": 1,
+    "reviewShare": 0,
+    "urgencyAccuracy": 1
+  },
+  "cases": [
+    {
+      "id": "duplicate-charge",
+      "expectedCategory": "payments",
+      "category": "payments",
+      "queue": "routine"
+    },
+    {
+      "id": "late-parcel",
+      "expectedCategory": "shipping",
+      "category": "shipping",
+      "queue": "routine"
+    },
+    {
+      "id": "outage",
+      "expectedCategory": "technical",
+      "category": "technical",
+      "queue": "priority"
+    },
+    {
+      "id": "return",
+      "expectedCategory": "returns",
+      "category": "returns",
+      "queue": "routine"
+    },
+    {
+      "id": "opening-hours",
+      "expectedCategory": "other",
+      "category": "other",
+      "queue": "routine"
+    },
+    {
+      "id": "ambiguous",
+      "expectedCategory": "other",
+      "category": "other",
+      "queue": "routine"
+    },
+    {
+      "id": "angry-return",
+      "expectedCategory": "returns",
+      "category": "returns",
+      "queue": "priority"
+    },
+    {
+      "id": "fraud",
+      "expectedCategory": "payments",
+      "category": "payments",
+      "queue": "priority"
+    }
+  ],
+  "findings": [
+    "All eight primary-category and binary urgency labels matched. This small authored set is not a representative accuracy benchmark.",
+    "The ambiguous ticket was expected to need review but was routed to routine. Category correctness did not establish that routing was safe.",
+    "Demo fixtures send the ambiguous sample to review; fixed demo behavior is not a prediction of live behavior."
+  ],
+  "cost": {
+    "actualBilledAmount": null,
+    "note": "The script did not record token usage or an exact charge. Eight short requests were made at the configured stable model; no further paid evaluation calls were made."
+  }
+}
